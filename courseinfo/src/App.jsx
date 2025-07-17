@@ -1,26 +1,4 @@
-const Header = (props) => <h1>{props.name}</h1>
-
-const Content = (props) => (
-  <div>
-    <Part key={props.parts[0].id} part={props.parts[0]} />
-    <Part key={props.parts[1].id} part={props.parts[1]} />
-    <Part key={props.parts[2].id} part={props.parts[2]} />
-  </div>
-)
-
-const Part = (props) => (
-  <p>
-    {props.part.name} {props.part.exercises}
-  </p>
-)
-
-const Course = (props) => (
-  <>
-    <Header name = {props.course.name}/>
-    <Content parts = {props.course.parts}/>
-  </>
-  
-)
+import Course from "./components/Course.jsx"
 
 const App = () => {
   const course = {
@@ -44,7 +22,7 @@ const App = () => {
       }
     ]
   }
-
+   
   return <Course course={course} />
 }
 
