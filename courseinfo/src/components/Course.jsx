@@ -20,8 +20,7 @@ const Part = (props) => (
 
 
 const TotalExer = (props) => {
-  let total = 0 ; 
-  props.parts.forEach(part => {total+=part.exercises});
+  const total = props.parts.reduce((s,part) => s + part.exercises, 0);
   return(<p>
     Total of {total} Exercises
   </p>)
